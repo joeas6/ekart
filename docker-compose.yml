@@ -4,12 +4,16 @@ services:
         container_name: angular-app
         restart: always
         build: .
+        environment:
+            - API_URL=${API_URL}
         ports:
           - "80:80"
   node-app:
     container_name: node-app
     restart: always
     build: .
+    environment:
+        - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
       - "3000:3000"
     links:
