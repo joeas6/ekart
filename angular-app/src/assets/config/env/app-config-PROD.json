@@ -1,0 +1,11 @@
+{
+    "env": {
+        "name": "PROD",
+        "apiUrl": "http://ekt-tm.com:3000"
+    },
+    "keyCloak": {
+        "url": "http://ekt-tm.com:8080/auth",
+        "realm": "ekt",
+        "clientId": "ekt"
+    }
+}

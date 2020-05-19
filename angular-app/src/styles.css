@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) { 
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+   /* Chart.js */
+   @-webkit-keyframes chartjs-render-animation {
+    from {
+      opacity: 0.99
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes chartjs-render-animation {
+    from {
+      opacity: 0.99
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  .chartjs-render-monitor {
+    -webkit-animation: chartjs-render-animation 0.001s;
+    animation: chartjs-render-animation 0.001s;
+  }
+  .content{margin-top:60px;margin-left:0px !important;margin-right:0px !important}
+
+
+
+
+
+
+.progress-loader
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    
+  }
+  .overlay{
+    height:100vh;
+    width:100%;
+    background-color:rgba(0,0,0,.03);
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed;
+  }
+
+  body{
+    margin:0;
+    font-size: 13px !important; 
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  .container-fluid{
+    min-height: 563px;
+  }
+
+  html{
+    font-size: 13px !important; 
+    font-family: Arial, Helvetica, sans-serif !important; 
+  }
+
+.table .thead-light th {
+    background-color: #e9ecef !important;
+    font-size: 13px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+ }
+ body .ui-table .ui-table-caption {
+  background: #e9ecef !important;
+  font-size: 13px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+body .ui-paginator {
+     border-bottom: 0 !important;
+     font-size: 13px !important;
+     font-family: Arial, Helvetica, sans-serif !important;
+     padding: 5px !important;
+} 
+
+body .ui-table .ui-table-tbody > tr > td {
+  background-color: #ffffff  !important;
+  border: 1px solid #c8c8c8  !important;
+    font-size: 13px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body .ui-table .ui-table-summary {
+  font-size: 13px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-align-last: end;
+  color: #3866e8 !important;
+  padding: 0px 5px 5px 0px !important;
+}
+
+body .ui-table .ui-table-thead > tr > th {
+  font-size: 13px !important;
+  font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif !important;
+  font-weight: 0 !important;
+  background-color: #e9ecef!important;
+}
+
+.ui-table table {
+  table-layout: auto !important;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+  color: rgb(212, 212, 214)!important; 
+} 
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+  color: red!important; 
+} 
+
+::-ms-input-placeholder { /* Microsoft Edge */ 
+  color: orange!important; 
+}
+
+body .ui-table .ui-sortable-column.ui-state-highlight .ui-sortable-column-icon {
+  color: #848484 !important; 
+}
+body .ui-table .ui-sortable-column.ui-state-highlight {
+  color: #000000 !important;  
+}
+
+.export-btn {
+  position: absolute;right: 15px;
+}
+
+.bg-dark {
+  background-color: cadetblue!important;
+}

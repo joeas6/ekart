@@ -1,0 +1,11 @@
+{
+    "env": {
+        "name": "PROD",
+        "apiUrl": "http://3.6.231.130:3000"
+    },
+    "keyCloak": {
+        "url": "http://3.6.231.130:8080/auth",
+        "realm": "ekt",
+        "clientId": "ekt"
+    }
+}

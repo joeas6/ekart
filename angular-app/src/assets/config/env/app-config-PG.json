@@ -1,0 +1,11 @@
+{
+    "env": {
+        "name": "PG",
+        "apiUrl": "http://52.66.247.218:3000"
+    },
+    "keyCloak": {
+        "url": "http://13.234.29.241/auth",
+        "realm": "ekt",
+        "clientId": "ekt"
+    }
+}

@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3">
+  <h4 class="h4">Product</h4>
+</div>
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productService.selectedProduct._id"/>
+          
+
+        <div class="form-group row">
+          <label for="usr" class="col-sm-4">Product Name</label>
+          <input type="search" class="form-control col-sm-4" 
+            [(ngModel)]="productService.selectedProduct.productName" name="productName" #productName="ngModel" required/>
+        </div>
+        <p></p>
+        
+        <div class="form-group right">
+          <button class="btn btn-primary"  type="submit" [disabled]="!productForm.valid">Submit</button>&nbsp;&nbsp;
+          <button class="btn btn-primary" type="button" (click)="resetForm(productForm)">Clear</button>
+        </div>
+ 
+      </form>
+    </div> 
+  </div>
+</div>
+<p></p><p></p>
+<table class="table responsive-table table-bordered ">
+    <thead class="thead-light text-center ">
+      <tr>
+        <th>S.No</th>
+        <th>Product Name</th>
+        <th>Created Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let ct of productService.products; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{ct.productName}}</td>
+      <td>{{ct.createdDate | date:'MM-dd-yyyy'}}</td>
+      <td>
+        <span class="col-sm-offset-2 action-button" data-toggle="tooltip" data-placement="top" title="Delete" (click)="onDelete(ct._id,productForm)"><img height="18" width="18" src="assets/images/trash_1.png"></span>
+     </td>
+    </tr>
+   <tr *ngIf="!productService.products || productService.products.length === 0">
+      <td colspan="4" align="center">No Products found</td>
+    </tr>
+  </table>
+  

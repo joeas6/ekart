@@ -1,0 +1,11 @@
+{
+    "env": {
+        "name": "LOCAL",
+        "apiUrl": "http://localhost:3000"
+    },
+    "keyCloak": {
+        "url": "http://localhost/auth",
+        "realm": "ekt",
+        "clientId": "ekt"
+    }
+}
