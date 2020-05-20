@@ -3,7 +3,7 @@ services:
 angular-app:
         container_name: angular-app
         restart: always
-        build: .
+        build: ./angular-app
         environment:
             - API_URL=${API_URL}
         ports:
@@ -11,7 +11,7 @@ angular-app:
 node-app:
     container_name: node-app
     restart: always
-    build: .
+    build: ./node-app
     environment:
         - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
