@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install npm -g
 
 # If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci --only=production
 
 RUN chown -R root:root /usr/local/lib/node_modules/
 RUN chmod -R 777 /usr/local/lib/node_modules/
