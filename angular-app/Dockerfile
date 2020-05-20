@@ -3,18 +3,20 @@ FROM node
 # Create app directory
 WORKDIR /usr/src/angular-app
 
+RUN npm install -g @angular/cli
+
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install npm -g
+RUN npm install
 
 # If you are building your code for production
 #RUN npm ci --only=production
 
-RUN chown -R root:root /usr/local/lib/node_modules/
-RUN chmod -R 777 /usr/local/lib/node_modules/
+#RUN chown -R root:root /usr/local/lib/node_modules/
+#RUN chmod -R 777 /usr/local/lib/node_modules/
 
 #RUN npm install --save-dev @angular-devkit/build-angular
 #RUN npm install --save-dev @angular/cli@latest
@@ -23,14 +25,15 @@ RUN chmod -R 777 /usr/local/lib/node_modules/
 #RUN npm install -g @angular/cli
 #RUN npm install -g @angular/cli@latest
 
-RUN npm install --save-dev -g @angular-devkit/build-angular
+#RUN npm install --save-dev -g @angular-devkit/build-angular
 #RUN npm install -g @angular/cli
-RUN npm install --save-dev -g @angular/cli@latest
+#RUN npm install --save-dev -g @angular/cli@latest
 
 
 # Bundle app source
 COPY . .
 
+#RUN ng build --prod
 RUN ng build --prod
 
 EXPOSE 80
