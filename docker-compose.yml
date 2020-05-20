@@ -1,10 +1,10 @@
-version: "3.8"
+version: "3.3"
 services:
   angular-app:
     container_name: angular-app
     restart: always
     build:
-    dir: ./angular-app
+      dir: ./angular-app
     environment:
       - API_URL=${API_URL}
     ports:
@@ -13,7 +13,7 @@ services:
     container_name: node-app
     restart: always
     build:
-    dir: ./node-app
+      dir: ./node-app
     environment:
       - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
