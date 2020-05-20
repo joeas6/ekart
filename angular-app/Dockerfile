@@ -17,6 +17,7 @@ RUN chown -R root:root /usr/local/lib/node_modules/
 RUN chmod -R 777 /usr/local/lib/node_modules/
 
 RUN npm install -g @angular/cli
+RUN npm install -g @angular-devkit/build-angular
 
 # Bundle app source
 COPY . .
