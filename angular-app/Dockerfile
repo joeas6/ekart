@@ -16,11 +16,12 @@ RUN npm install npm -g
 RUN chown -R root:root /usr/local/lib/node_modules/
 RUN chmod -R 777 /usr/local/lib/node_modules/
 
-RUN npm install --save-dev @angular-devkit/build-angular
-RUN npm install --save-dev @angular/cli@latest
+#RUN npm install --save-dev @angular-devkit/build-angular
+#RUN npm install --save-dev @angular/cli@latest
 
-#RUN npm install -g @angular/cli
-#RUN npm install -g @angular-devkit/build-angular
+RUN npm install -g @angular-devkit/build-angular
+RUN npm install -g @angular/cli
+
 
 # Bundle app source
 COPY . .
