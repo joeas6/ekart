@@ -7,8 +7,8 @@ var productController = require('./service/product/product-controller');
 
 var app = express();
 
-var angularHost ="http://localhost";
-//var angularHost = process.env.ANGULAR_HOST;
+//var angularHost ="http://localhost";
+var angularHost = process.env.ANGULAR_HOST;
 var host="0.0.0.0";
 
 app.use(bodyParser.json());

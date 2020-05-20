@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-//var dbHost = "mongodb://mongodb:27017/ekart";
-var dbHost = "mongodb://localhost:27017/ekart";
+var dbHost = "mongodb://mongodb:27017/ekart";
+//var dbHost = "mongodb://localhost:27017/ekart";
 
 mongoose.connect(dbHost, (err) => {
     if (err) {
