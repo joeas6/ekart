@@ -5,7 +5,7 @@
 export const environment = {
   production:false,
   //apiUrl:'http://localhost:3000/api/',
-  apiUrl:window["env"]["apiUrl"] || "default"
+  apiUrl:window["env"]["apiUrl"] || "default" + ":3000/api/"
 };
 
 /*
