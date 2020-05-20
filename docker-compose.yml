@@ -1,6 +1,6 @@
 version: 3
 services:
- app:
+angular-app:
         container_name: angular-app
         restart: always
         build: .
@@ -8,7 +8,7 @@ services:
             - API_URL=${API_URL}
         ports:
           - "80:80"
-  app:
+node-app:
     container_name: node-app
     restart: always
     build: .
@@ -18,7 +18,7 @@ services:
       - "3000:3000"
     links:
       - mongodb
-  mongodb:
+mongodb:
     container_name: mongodb
     image: mongo
     ports:
