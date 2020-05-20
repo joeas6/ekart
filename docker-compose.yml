@@ -4,7 +4,7 @@ angular-app:
         container_name: angular-app
         restart: always
         build:
-          context: ./angular-app
+          dir: ./angular-app
         environment:
             - API_URL=${API_URL}
         ports:
@@ -13,7 +13,7 @@ node-app:
     container_name: node-app
     restart: always
     build:
-      context: ./node-app
+      dir: ./node-app
     environment:
         - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
