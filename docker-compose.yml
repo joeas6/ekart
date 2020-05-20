@@ -1,26 +1,26 @@
 version: "3.8"
 services:
-angular-app:
-        container_name: angular-app
-        restart: always
-        build:
-          dir: ./angular-app
-        environment:
-            - API_URL=${API_URL}
-        ports:
-          - "80:80"
-node-app:
+  angular-app:
+    container_name: angular-app
+    restart: always
+    build:
+    dir: ./angular-app
+    environment:
+      - API_URL=${API_URL}
+    ports:
+      - "80:80"
+  node-app:
     container_name: node-app
     restart: always
     build:
-      dir: ./node-app
+    dir: ./node-app
     environment:
-        - ANGULAR_HOST=${ANGULAR_HOST}
+      - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
       - "3000:3000"
     links:
       - mongodb
-mongodb:
+  mongodb:
     container_name: mongodb
     image: mongo
     ports:
