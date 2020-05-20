@@ -1,6 +1,6 @@
 version: 3
 services:
- angular-app:
+ app:
         container_name: angular-app
         restart: always
         build: .
@@ -8,7 +8,7 @@ services:
             - API_URL=${API_URL}
         ports:
           - "80:80"
-  node-app:
+  app:
     container_name: node-app
     restart: always
     build: .
