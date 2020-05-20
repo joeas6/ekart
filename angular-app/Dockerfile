@@ -8,7 +8,8 @@ WORKDIR /usr/src/angular-app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
+RUN npm install npm -g
+
 # If you are building your code for production
 # RUN npm ci --only=production
 
