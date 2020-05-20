@@ -13,7 +13,7 @@ RUN npm install
 # RUN npm ci --only=production
 
 RUN chown -R root:root /usr/local/lib/node_modules/
-RUN chmod 775 /usr/local/lib/node_modules/
+RUN chmod -R 777 /usr/local/lib/node_modules/
 
 RUN npm install -g angular-cli
 
