@@ -12,6 +12,9 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
+RUN chown -R root:root /usr/local/lib/node_modules/
+RUN chmod 775 /usr/local/lib/node_modules/
+
 RUN npm install -g angular-cli
 
 # Bundle app source
