@@ -3,6 +3,10 @@ FROM node
 # Create app directory
 WORKDIR /usr/src/angular-app
 
+RUN apt-get update
+
+RUN apt-get -y install gettext-base
+
 RUN npm install -g @angular/cli
 
 # Install app dependencies
@@ -40,11 +44,10 @@ EXPOSE 80
 
 #CMD ["/bin/sh",  "-c",  "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js && exec node /usr/src/angular-app/dist/angular-app/server.js"]
 
-#CMD ["/bin/sh",  "-c",  "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js && node /usr/src/angular-app/dist/angular-app/server.js"]
+CMD ["/bin/sh",  "-c",  "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js && node /usr/src/angular-app/dist/angular-app/server.js"]
 
 #CMD ["/bin/sh",  "-c",  "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js"]
 
 #RUN /bin/sh -c "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js"
 
-CMD [ "node", "/usr/src/angular-app/dist/angular-app/server.js" ]
-#
+#CMD [ "node", "/usr/src/angular-app/dist/angular-app/server.js" ]
