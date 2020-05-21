@@ -4,7 +4,7 @@
 
 export const environment = {
   production:true,
-  apiUrl:window["env"]["apiUrl"] || "default" + ":3000/api/"
+  apiUrl:window["env"]["apiUrl"] + ":3000/api/" || "default"
 };
 
 /*
