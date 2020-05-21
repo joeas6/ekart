@@ -44,7 +44,7 @@ EXPOSE 80
 
 #CMD ["/bin/sh",  "-c",  "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js"]
 
-RUN sh -c "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js"
+RUN /bin/sh -c "envsubst < /usr/src/angular-app/dist/angular-app/assets/env/env.template.js > /usr/src/angular-app/dist/angular-app/assets/env/env.js"
 
 CMD [ "node", "/usr/src/angular-app/dist/angular-app/server.js" ]
 #
