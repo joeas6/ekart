@@ -6,7 +6,7 @@ services:
     build:
       context: ./angular-app
     environment:
-      - API_URL=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
+      - API_URL=$({API_URL})
     ports:
       - "80:80"
   node-app:
@@ -15,7 +15,7 @@ services:
     build:
       context: ./node-app
     environment:
-      - ANGULAR_HOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
+      - ANGULAR_HOST=${ANGULAR_HOST}
     ports:
       - "3000:3000"
     links:
