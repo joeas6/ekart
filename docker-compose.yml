@@ -6,7 +6,7 @@ services:
     build:
       context: ./angular-app
     environment:
-      - API_URL=$({API_URL})
+      - API_URL=${API_URL}
     ports:
       - "80:80"
   node-app:
